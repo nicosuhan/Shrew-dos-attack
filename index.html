@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shrew DoS Attack</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #1e90ff; }
+    code { background-color: #f2f2f2; padding: 0.2rem 0.4rem; border-radius: 4px; }
+    .highlight { background-color: #ffefc3; padding: 0.4rem; }
+  </style>
+</head>
+<body>
+  <h1>Shrew DoS Attack</h1>
+  <p>Atacul <strong>Shrew</strong> este un atac low-rate de tip Denial-of-Service care lovește punctul slab al protocolului TCP: timeout-ul de retransmisie (RTO)...</p>
+  <h2>Cum funcționează?</h2>
+  <ul>
+    <li>Trimite rafale scurte sincronizate cu timeout-ul TCP</li>
+    <li>Reduce dramatic performanța traficului legitim</li>
+    <li>Este greu de detectat – are rată mică și trafic discret</li>
+  </ul>
+  <h2>Parametri principali:</h2>
+  <p><code>T</code> = perioada atacului, <code>L</code> = durata rafalei, <code>R</code> = rata vârfului</p>
+  <h2>Exemplu educațional în Python:</h2>
+  <pre class="highlight">
+    vezi fișierul shrew_sim.py pentru o simulare (educațională)
+  </pre>
+</body>
+</html>
