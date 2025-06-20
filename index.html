@@ -5,26 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shrew DoS Attack</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 2rem; line-height: 1.6; }
-    h1, h2 { color: #1e90ff; }
-    code { background-color: #f2f2f2; padding: 0.2rem 0.4rem; border-radius: 4px; }
-    .highlight { background-color: #ffefc3; padding: 0.4rem; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e90ff, #0f68c0);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: #1e90ff;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .button-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .button-container a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #1e90ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .button-container a:hover {
+      background-color: #0f68c0;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>Shrew DoS Attack</h1>
-  <p>Atacul <strong>Shrew</strong> este un atac low-rate de tip Denial-of-Service care lovește punctul slab al protocolului TCP: timeout-ul de retransmisie (RTO)...</p>
-  <h2>Cum funcționează?</h2>
-  <ul>
-    <li>Trimite rafale scurte sincronizate cu timeout-ul TCP</li>
-    <li>Reduce dramatic performanța traficului legitim</li>
-    <li>Este greu de detectat – are rată mică și trafic discret</li>
-  </ul>
-  <h2>Parametri principali:</h2>
-  <p><code>T</code> = perioada atacului, <code>L</code> = durata rafalei, <code>R</code> = rata vârfului</p>
-  <h2>Exemplu educațional în Python:</h2>
-  <pre class="highlight">
-    vezi fișierul shrew_sim.py pentru o simulare (educațională)
-  </pre>
+  <header>
+    <h1>Shrew DoS Attack</h1>
+    <p>Un atac subtil, dar devastator pentru traficul TCP</p>
+  </header>
+
+  <main>
+    <h2>🧠 Ce este Shrew?</h2>
+    <p>
+      Shrew este un atac de tip Denial-of-Service cu rată redusă, care nu suprasolicită rețeaua, ci o sabotează strategic, profitând de mecanismele de control al congestiei TCP.
+    </p>
+
+    <h2>⚙️ Cum funcționează?</h2>
+    <ul>
+      <li>Exploatează <strong>timeout-ul TCP (RTO)</strong> prin rafale scurte</li>
+      <li>Reduce dramatic performanța fluxurilor legitime</li>
+      <li>Este greu de detectat – nu generează trafic masiv</li>
+    </ul>
+
+    <div class="button-container">
+      <a href="shrew_sim.py" target="_blank">🔧 Cod Python – Simulare</a>
+      <a href="README.md" target="_blank">📄 Explicații detaliate (README)</a>
+      <a href="https://github.com/nicosuhan/Shrew-dos-attack" target="_blank">🌐 Repo GitHub</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Proiect educațional realizat de nicosuhan • GitHub Pages
+  </footer>
 </body>
 </html>
